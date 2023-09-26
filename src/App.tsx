@@ -24,7 +24,7 @@ export default function App() {
   
   const [isChecked, setIsChecked] = useState([false, false, false])
 
-  const handleToggle = (index) => {
+  const handleToggle = (index : number) => {
     const updatedArray = [...isChecked]
     updatedArray[index] = !updatedArray[index]
     setIsChecked(updatedArray)
