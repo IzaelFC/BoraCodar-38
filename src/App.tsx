@@ -13,10 +13,14 @@ export default function App() {
     const correct = document.getElementById('correct')
     const button = document.getElementById('enable')
 
-    if (correct.checked) {
-      button.classList = 'enable enable-button'
-    } else {
-      button.classList = 'disable cursor-default disable-button'
+    if (correct && button) {
+      if (correct instanceof HTMLInputElement) {
+        if (correct.checked) {
+          button.classList = 'enable enable-button';
+        } else {
+          button.classList = 'disable cursor-default disable-button';
+        }
+      }
     }
   }
   
