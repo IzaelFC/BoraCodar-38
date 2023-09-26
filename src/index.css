@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --gray-1 : #D9D9D9;
+    --gray-2 : #565E6D;
+    --gray-3 : #252C3A;
+    --gray-4 : #1D2330;
+    --gray-5 : #181D28;
+    --gray-6 : #161A24;
+
+    --green-light: #ABF770;
+    --green-dark: #5CAD1D;
+    --red-light: #F77070;
+    --red-dark : #AB3030;
+
+    font-family: 'Sora', sans-serif;
+}
+
+@layer components {
+    p {
+        @apply text-center text-[--gray-1]
+    }
+    
+    img {
+        @apply mx-auto
+    }
+
+    label {
+        @apply relative flex flex-col text-xs lg:text-base lg:max-w-[240px] sm:max-w-[200px] space-y-5 lg:px-10 sm:px-5 py-8 border-2 lg:border-4 border-b-4 cursor-pointer rounded
+    }
+
+    input {
+        @apply hidden
+    }
+
+    .card {
+        @apply bg-[--gray-5] hover:bg-[--gray-4] border-[--gray-3] hover:border-[--gray-2] rounded
+    }
+
+    .circle {
+        @apply border-2 lg:border-4 border-[--gray-3] group-hover:border-[--gray-2] rounded-full
+    }
+
+    .enable-button {
+        @apply bg-[--green-light] lg:p-3 p-2 text-[--green-dark] transition-all duration-500 rounded-full
+    }
+
+    .disable-button {
+        @apply bg-[--gray-3] lg:p-3 p-2 text-[--gray-2] transition-all duration-500 rounded-full
+    }
+}
