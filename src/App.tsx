@@ -10,16 +10,14 @@ import { PiCaretRightBold } from 'react-icons/pi'
 
 export default function App() {
   function enable(){
-    const correct = document.getElementById('correct')
-    const button = document.getElementById('enable')
+    const correct = document.getElementById('correct') as HTMLInputElement;
+    const button = document.getElementById('enable') as HTMLButtonElement;
 
     if (correct && button) {
-      if (correct instanceof HTMLInputElement) {
-        if (correct.checked) {
-          button.classList = 'enable enable-button';
-        } else {
-          button.classList = 'disable cursor-default disable-button';
-        }
+      if (correct.checked) {
+        button.className = 'enable enable-button';
+      } else {
+        button.className = 'disable cursor-default disable-button';
       }
     }
   }
